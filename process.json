@@ -1,0 +1,53 @@
+{
+    "definitions": {
+        "slices": [
+            {
+                "id": 0,
+                "data": [
+                    { "name": "1x1", "x": 64, "y": 448, "width": 64, "height": 64 },
+                    { "name": "2x1", "x": 64, "y": 576, "width": 128, "height": 64 },
+                    { "name": "2x2", "x": 640, "y": 128, "width": 128, "height": 128 },
+                    { "name": "2xcorner", "x": 832, "y": 128, "width": 128, "height": 128 },
+                    { "name": "2xtriangle-7", "x": 448, "y": 128, "width": 128, "height": 128 },
+                    { "name": "barrel", "x": 768, "y": 1472, "width": 128, "height": 192 },
+                    { "name": "chimney-S", "x": 1920, "y": 1152, "width": 64, "height": 448 },
+                    { "name": "chimney", "x": 1728, "y": 64, "width": 256, "height": 576 },
+                    { "name": "control-room", "x": 448, "y": 1344, "width": 256, "height": 320 },
+                    { "name": "crane-s", "x": 64, "y": 1344, "width": 320, "height": 320 },
+                    { "name": "crane-l", "x": 64, "y": 1024, "width": 896, "height": 256 },
+                    { "name": "engine", "x": 960, "y": 448, "width": 256, "height": 192 },
+                    { "name": "engine-S", "x": 1728, "y": 960, "width": 192, "height": 128 },
+                    { "name": "hook", "x": 1280, "y": 64, "width": 384, "height": 576 },
+                    { "name": "house-1", "x": 1536, "y": 1152, "width": 64, "height": 128 },
+                    { "name": "house-2", "x": 1536, "y": 960, "width": 128, "height": 128 },
+                    { "name": "house-3", "x": 1216, "y": 1024, "width": 256, "height": 320 },
+                    { "name": "house-4", "x": 1536, "y": 704, "width": 256, "height": 192 },
+                    { "name": "pipe-F", "x": 1024, "y": 1216, "width": 128, "height": 192 },
+                    { "name": "pipe-H", "x": 768, "y": 1344, "width": 192, "height": 64 },
+                    { "name": "pipe-I", "x": 256, "y": 128, "width": 64, "height": 192 },
+                    { "name": "pipe-L", "x": 64, "y": 128, "width": 128, "height": 192 },
+                    { "name": "tank-L", "x": 448, "y": 384, "width": 448, "height": 192 },
+                    { "name": "tank-S", "x": 1024, "y": 128, "width": 192, "height": 256 },
+                    { "name": "track", "x": 448, "y": 704, "width": 768, "height": 256 },
+                    { "name": "triangle-7", "x": 192, "y": 448, "width": 64, "height": 64 },
+                    { "name": "triangle-9", "x": 320, "y": 448, "width": 64, "height": 64 },
+                    { "name": "vent", "x": 1024, "y": 1024, "width": 128, "height": 128 },
+                    { "name": "wheel-L", "x": 64, "y": 704, "width": 320, "height": 256 },
+                    { "name": "wheel-S", "x": 1280, "y": 704, "width": 192, "height": 256 },
+                    { "name": "workshop", "x": 960, "y": 1472, "width": 256, "height": 320 },
+                    { "name": "service-bay", "x": 1280, "y": 1408, "width": 320, "height": 256 }
+                ]
+            }
+        ]
+    },
+    "pipelines": [
+        {
+            "name": "atlas",
+            "steps": [
+                { "tool": "slicer", "parameters": { "slices": 0 } },
+                { "tool": "packer", "parameters": { "output": "$name-atlas", "prefix": "$name-", "padding": "2" } },
+                { "tool": "output-directory", "parameters": { "target": "results" } }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "slice-dice",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "bin": {
+    "slice-dice": "./dist/main.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "express": "^4.21.0",
+    "free-tex-packer-core": "^0.3.4",
+    "jimp": "^1.6.0",
+    "minimist": "^1.2.8",
+    "sharp": "^0.33.5",
+    "tsx": "^4.19.1",
+    "vite": "^5.4.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/minimist": "^1.2.5"
+  }
+}
