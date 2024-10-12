@@ -11,9 +11,10 @@ const chalk_1 = __importDefault(require("chalk"));
 function startHosting(port = 3000) {
     const addresses = getNetworkInterfaces(port);
     const app = (0, express_1.default)();
-    app.use("/", express_1.default.static(path_1.default.join(__dirname, "slice-dice-ui", "public")));
-    app.use("/", express_1.default.static(path_1.default.join(__dirname, "slice-dice-ui", "dist")));
+    app.use("/", express_1.default.static(path_1.default.join(__dirname, "..", "slice-dice-ui", "public")));
+    app.use("/", express_1.default.static(path_1.default.join(__dirname, "..", "slice-dice-ui", "dist")));
     app.listen(port);
+    console.log(chalk_1.default.green(path_1.default.join(__dirname, "slice-dice-ui", "dist")));
     console.log(chalk_1.default.green("Web UI is available is at:"));
     for (const address of addresses) {
         console.log(chalk_1.default.blue("http://" + address));
