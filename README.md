@@ -6,7 +6,7 @@ npm link
 ```
 
 ```sh
-Usage: slice-dice-ui [options]
+Usage: slice-dice [options]
 Options:
   -c, --config <file>  Path to the config file
   -p, --pipeline <name>  Name of the pipeline to use
