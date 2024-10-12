@@ -18,7 +18,7 @@ const input = args.i ?? args.input ?? ".";
 const host = args.h ?? args.host ?? false;
 const help = args["?"] ?? args.help ?? false;
 if (help) {
-    console.log("Usage: slice-dice-ui [options]");
+    console.log("Usage: slice-dice [options]");
     console.log("Options:");
     console.log("  -c, --config <file>  Path to the config file");
     console.log("  -p, --pipeline <name>  Name of the pipeline to use");
