@@ -28,7 +28,7 @@ if (help) {
     process.exit(0);
 }
 if (host) {
-    (0, host_1.startHosting)(typeof host === "string" ? parseInt(host) : host);
+    (0, host_1.startHosting)(typeof host === "string" ? parseInt(host) : undefined);
 }
 else {
     if (configName === undefined) {
